@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 
 static void	print_stack(char *message, int message_size, int **list, int *size)
 {
@@ -16,7 +17,7 @@ static void	print_stack(char *message, int message_size, int **list, int *size)
 	}
 	while (i < *size)
 	{
-		str = ft_itoa((*list)[i]);
+		str = itoa((*list)[i]);
 		j = 0;
 		while (str[j])
 		{
